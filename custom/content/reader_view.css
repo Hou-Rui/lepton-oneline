@@ -1,0 +1,8 @@
+body.sans-serif .moz-reader-content {
+    font-family: sans-serif !important;
+}
+
+body.sans-serif .moz-reader-content p {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
