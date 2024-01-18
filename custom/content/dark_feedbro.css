@@ -7,7 +7,7 @@
   --color-active: #364d6d;
 }
 
-@-moz-document url("moz-extension://41811125-9664-4263-b101-7d4fb0dfb782/reader.html") {
+@-moz-document regexp("moz-extension:.*reader.html") {
   body {
     background-color: var(--color-dark-1) !important;
   }
