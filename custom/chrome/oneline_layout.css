@@ -11,9 +11,9 @@ element {
   --urlbar-toolbar-height: 36px;
 }
 
-#navigator-toolbox {
-  background-color: var(--lwt-accent-color) !important;
-}
+/* #navigator-toolbox { */
+/*   background-color: var(--lwt-accent-color) !important; */
+/* } */
 
 
 /* H I D I N G   E L E M E N T S */
