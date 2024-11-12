@@ -91,16 +91,10 @@ margin-right: calc(100vw - var(--navbarWidth)) !important;
   height: 100% !important;
 }
 
-#urlbar {
-  margin-top: 2px !important;
-  top: 6px !important;
-}
-
 #urlbar[breakout][breakout-extend] {
-  margin-top: 2px !important;
-  top: 6px !important;
   left: 0px !important;
   width: 100% !important;
+  margin-top: 6px !important;
 }
 
 #urlbar[breakout][breakout-extend] > #urlbar-input-container {
