@@ -1,0 +1,16 @@
+@-moz-document url-prefix(about:home), url-prefix(about:newtab), url-prefix(about:blank) {
+    body.activity-stream {
+        --newtab-primary-action-background: var(--in-content-accent-color) !important;
+        background-color: var(--in-content-page-background) !important;
+    }
+
+    body.activity-stream table#searchSuggestionTable {
+        font-size: larger !important;
+        font-family: sans-serif !important;
+        line-height: 2.0 !important;
+    }
+
+    button.personalize-button {
+        display: none !important;
+    }
+}

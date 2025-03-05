@@ -1,0 +1,9 @@
+.tab-icon-image {
+  box-sizing: content-box !important;
+  padding: 3px 0 !important;
+  border-bottom: 2px solid var(--identity-icon-color) !important;
+}
+
+.tabbrowser-tab .tab-content::before {
+  display: none !important;
+}

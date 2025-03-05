@@ -1,0 +1,10 @@
+/* https://stackoverflow.com/questions/61814564/how-can-i-enable-dark-mode-when-viewing-a-pdf-file-in-firefox */
+#viewerContainer > #viewer > .page {
+  background-color: rgb(25, 25, 25) !important;
+}
+
+#viewerContainer > #viewer > .page > .canvasWrapper > canvas, #sidebarContent > #thumbnailView img.thumbnailImage {
+  filter: grayscale(100%) !important;
+  filter: invert(90%) !important;
+}
+
