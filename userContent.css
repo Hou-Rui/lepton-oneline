@@ -2,3 +2,8 @@
 @import url("css/leptonContent.css");
 
 /** Add your custom styles below **********************************************/
+@import url(custom/content/dark_pdf.css);
+@import url(custom/content/newtab_background.css);
+@import url(custom/content/remove_more_from_mozilla.css);
+@import url(custom/content/reader_view.css);
+@import url(custom/content/dark_feedbro.css);

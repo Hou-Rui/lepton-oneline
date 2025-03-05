@@ -1,0 +1,14 @@
+@-moz-document url-prefix("about:reader") {
+  body * {
+    font-family: sans-serif !important;
+  }
+
+  .moz-reader-content p {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .pocket-button {
+    display: none !important;
+  }
+}
