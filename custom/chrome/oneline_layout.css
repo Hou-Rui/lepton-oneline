@@ -74,6 +74,10 @@ margin-left : var(--navbarWidth) !important;
 margin-right: calc(100vw - var(--navbarWidth)) !important;
 }*/
 
+#toolbar-menubar {
+  display: none !important;
+}
+
 #nav-bar {
   margin-left: calc(100vw - var(--navbarWidth)) !important;
 }
