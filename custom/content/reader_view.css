@@ -2,6 +2,9 @@
   body * {
     font-family: sans-serif !important;
   }
+  pre, code, pre *, code * {
+    font-family: monospace !important;
+  }
 
   .moz-reader-content p {
     margin-top: 10px !important;
