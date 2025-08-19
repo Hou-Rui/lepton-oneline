@@ -139,6 +139,9 @@ margin-right: calc(100vw - var(--navbarWidth)) !important;
 
 
 /* Simplifying interface */
+#pinned-tabs-container {
+  margin-inline-end: 0px !important;
+}
 
 #nav-bar {
   background  : none !important;
