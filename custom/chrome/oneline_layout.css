@@ -80,6 +80,7 @@ margin-right: calc(100vw - var(--navbarWidth)) !important;
 
 #nav-bar {
   margin-left: calc(100vw - var(--navbarWidth)) !important;
+  padding-top: 4px !important;
 }
 
 #nav-bar[urlbar-exceeds-toolbar-bounds="true"] {
