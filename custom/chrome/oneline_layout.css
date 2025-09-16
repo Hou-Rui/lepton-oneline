@@ -1,38 +1,22 @@
-/* S E T T I N G S */
-
 :root {
-  --navbarWidth     : 500px; /* Set width of navbar. Use px for a fixed width
-  or vw for a percentage of your window. */
-  --animationSpeed  : 0.15s;
-}
-
-element {
+  --navbar-width: 500px;
   --urlbar-height: 32px;
   --urlbar-toolbar-height: 36px;
 }
 
-/* #navigator-toolbox { */
-/*   background-color: var(--lwt-accent-color) !important; */
-/* } */
-
-
-/* H I D I N G   E L E M E N T S */
-/* Comment or uncomment depending of what elements you want to hide */
-
-/* Back button */
-#back-button { display: none !important }
-
-/* Hide back and forward button only when disabled */
-/* TODO: figure out a way */
-
-/* Forward button */
-#forward-button { display: none !important }
-
-/* Hide forward button only when disabled */
-/* #forward-button[disabled="true"] { display: none !important } */
+/* Hide elements */
+/* Back & Forward button */
+#back-button {
+  display: none !important;
+}
+#forward-button {
+  display: none !important;
+}
 
 /* "Shield" icon */
-#tracking-protection-icon-container { display: none !important }
+#tracking-protection-icon-container {
+  display: none !important;
+}
 
 /* Site information button */
 /* #identity-box { display: none !important } */
@@ -41,13 +25,17 @@ element {
 /* #urlbar-search-mode-indicator { display: none !important } */
 
 /* Zoom button */
-#urlbar-zoom-button { display: none !important }
+#urlbar-zoom-button {
+  display: none !important;
+}
 
 /* Page action (right three dash button) */
 /* #pageActionButton { display: none !important } */
 
 /* These are the buttons on the right of the urlbar */
-#page-action-buttons>hbox:not(#star-button-box) { display: none !important }
+#page-action-buttons > hbox:not(#star-button-box) {
+  display: none !important;
+}
 
 /* #urlbar-label-box { display: none !important } */
 
@@ -61,34 +49,48 @@ element {
 /* Enable this to show the tab close button when hovering the tab */
 /* .tabbrowser-tab:hover .tab-close-button { display: -moz-inline-box !important } */
 
-/*============================================================================*/
-
-
 /* Oneline tweak */
-
-/*#TabsToolbar {
-margin-left : var(--navbarWidth) !important;
-}
-
-#nav-bar {
-margin-right: calc(100vw - var(--navbarWidth)) !important;
-}*/
-
 #toolbar-menubar {
   display: none !important;
 }
 
-#nav-bar {
-  margin-left: calc(100vw - var(--navbarWidth)) !important;
-  padding-top: 4px !important;
+#navigator-toolbox {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
 }
 
-#nav-bar[urlbar-exceeds-toolbar-bounds="true"] {
-  margin-left: 2px !important;
-}
-
+/* TabsToolbar takes remaining space */
 #TabsToolbar {
-  margin-right: var(--navbarWidth) !important;
+  order: 1;
+  flex: 1 1 auto !important;
+  min-width: 0 !important; /* prevents tab overflow pushing navbar off-screen */
+}
+
+/* Nav-bar sits on the right */
+#nav-bar {
+  order: 2;
+  flex: 1 1 var(--navbar-width) !important;
+  max-width: var(--navbar-width) !important;
+  min-width: 200px !important; /* optional: keep it usable when window is small */
+}
+
+#PersonalToolbar {
+  order: 3;
+  width: 100%;
+}
+
+/* Prevent clipping of panels/popups */
+#navigator-toolbox,
+.browser-toolbar {
+  overflow: visible !important;
+}
+
+/* Remove extra spacers */
+.titlebar-spacer[type="pre-tabs"],
+.titlebar-spacer[type="post-tabs"] {
+  display: none !important;
 }
 
 #urlbar-container {
@@ -99,7 +101,7 @@ margin-right: calc(100vw - var(--navbarWidth)) !important;
 #urlbar[breakout][breakout-extend] {
   left: 0px !important;
   width: 100% !important;
-  margin-top: 6px !important;
+  margin-top: 4px !important;
 }
 
 #urlbar[breakout][breakout-extend] > #urlbar-input-container {
@@ -110,34 +112,8 @@ margin-right: calc(100vw - var(--navbarWidth)) !important;
 }
 
 #urlbar-container {
-  min-width   : 0px !important;
+  min-width: 0px !important;
 }
-
-:root[uidensity="compact"] #nav-bar {
-  margin-top  : -37px !important;
-  height      : 37px !important;
-}
-
-:root:not([uidensity="compact"]):not([uidensity="touch"]) #nav-bar {
-  margin-top  : -44px !important;
-  height      : 44px !important;
-}
-
-:root[uidensity="touch"] #nav-bar {
-  margin-top  : -49px !important;
-  height      : 49px !important;
-}
-
-
-/* Dragging space */
-:root[sizemode="maximized"] #TabsToolbar {
-  margin-top: 0px;
-}
-
-#TabsToolbar {
-  margin-top: 0px;
-}
-
 
 /* Simplifying interface */
 #pinned-tabs-container {
@@ -145,57 +121,39 @@ margin-right: calc(100vw - var(--navbarWidth)) !important;
 }
 
 #nav-bar {
-  background  : none !important;
-  box-shadow  : none !important;
+  background: none !important;
+  box-shadow: none !important;
 }
 
 #navigator-toolbox {
-  border      : none !important;
+  border: none !important;
 }
 
 .titlebar-spacer {
-  display     : none !important;
+  display: none !important;
 }
 
 #urlbar-background {
-  border      : none !important;
+  border: none !important;
 }
 
 #urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
-  box-shadow  : none !important;
-  background  : none !important;
+  box-shadow: none !important;
+  background: none !important;
 }
-
 
 /* Hide urlbar elements when not active */
 
-.urlbar-icon:not(#star-button), #userContext-indicator, #userContext-label {
-  fill        : transparent !important;
-  background  : transparent !important;
-  color       : transparent !important;
+.urlbar-icon:not(#star-button),
+#userContext-indicator,
+#userContext-label {
+  fill: transparent !important;
+  background: transparent !important;
+  color: transparent !important;
 }
 
 #urlbar:hover .urlbar-icon,
 #urlbar:active .urlbar-icon,
 #urlbar[focused] .urlbar-icon {
-  fill        : var(--toolbar-color) !important;
-}
-
-
-/* animations */
-.subviewbutton,
-#nav-bar,
-#urlbar-background,
-.urlbar-icon,
-#userContext-indicator,
-#userContext-label,
-.urlbar-input-box,
-#identity-box,
-#tracking-protection-icon-container,
-[anonid=urlbar-go-button],
-.urlbar-icon-wrapper,
-#tracking-protection-icon,
-#identity-box image,
-stack {
-  transition  : var(--animationSpeed) !important;
+  fill: var(--toolbar-color) !important;
 }
