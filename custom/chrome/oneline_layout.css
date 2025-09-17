@@ -1,7 +1,5 @@
 :root {
   --navbar-width: 500px;
-  --urlbar-height: 32px;
-  --urlbar-toolbar-height: 36px;
 }
 
 /* Hide elements */
@@ -59,6 +57,12 @@
   flex-direction: row !important;
   align-items: center !important;
   flex-wrap: wrap !important;
+  border: none !important;
+}
+
+#nav-bar {
+  background: none !important;
+  box-shadow: none !important;
 }
 
 /* TabsToolbar takes remaining space */
@@ -88,72 +92,24 @@
 }
 
 /* Remove extra spacers */
-.titlebar-spacer[type="pre-tabs"],
-.titlebar-spacer[type="post-tabs"] {
-  display: none !important;
-}
-
-#urlbar-container {
-  width: auto !important;
-  height: 100% !important;
-}
-
-#urlbar[breakout][breakout-extend] {
-  left: 0px !important;
-  width: 100% !important;
-  margin-top: 4px !important;
-}
-
-#urlbar[breakout][breakout-extend] > #urlbar-input-container {
-  height: var(--urlbar-height) !important;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  padding-right: 0px !important;
-}
-
-#urlbar-container {
-  min-width: 0px !important;
-}
-
-/* Simplifying interface */
-#pinned-tabs-container {
-  margin-inline-end: 0px !important;
-}
-
-#nav-bar {
-  background: none !important;
-  box-shadow: none !important;
-}
-
-#navigator-toolbox {
-  border: none !important;
-}
-
 .titlebar-spacer {
   display: none !important;
+}
+
+#pinned-tabs-container {
+  margin-inline-end: 0px !important;
 }
 
 #urlbar-background {
   border: none !important;
 }
 
-#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
-  box-shadow: none !important;
-  background: none !important;
+#urlbar {
+  width: calc(var(--urlbar-width) - 8px) !important;
 }
 
-/* Hide urlbar elements when not active */
-
-.urlbar-icon:not(#star-button),
-#userContext-indicator,
-#userContext-label {
-  fill: transparent !important;
-  background: transparent !important;
-  color: transparent !important;
-}
-
-#urlbar:hover .urlbar-icon,
-#urlbar:active .urlbar-icon,
-#urlbar[focused] .urlbar-icon {
-  fill: var(--toolbar-color) !important;
+#urlbar[breakout][breakout-extend] {
+  left: 0px !important;
+  width: 100% !important;
+  margin-top: 4px !important;
 }
