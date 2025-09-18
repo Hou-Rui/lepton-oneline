@@ -1,5 +1,7 @@
 :root {
   --navbar-width: 500px;
+  --toolbar-start-end-padding: 4px;
+  --toolbarbutton-inner-padding: 4px;
 }
 
 /* Hide elements */
@@ -75,14 +77,22 @@
 /* Nav-bar sits on the right */
 #nav-bar {
   order: 2;
-  flex: 1 1 var(--navbar-width) !important;
+  flex: 0 1 var(--navbar-width) !important;
   max-width: var(--navbar-width) !important;
   min-width: 200px !important; /* optional: keep it usable when window is small */
 }
 
+#navigator-toolbox[tabs-hidden] #nav-bar,
+#TabsToolbar[collapsed] ~ #nav-bar {
+  flex: 1 1 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin-left: 0 !important;
+}
+
 #PersonalToolbar {
   order: 3;
-  width: 100%;
+  flex: 1 1 100% !important;
 }
 
 /* Prevent clipping of panels/popups */
@@ -104,8 +114,9 @@
   border: none !important;
 }
 
-#urlbar {
-  width: calc(var(--urlbar-width) - 8px) !important;
+#urlbar-container {
+  width: auto !important;
+  padding-inline-start: 0px !important;
 }
 
 #urlbar[breakout][breakout-extend] {
