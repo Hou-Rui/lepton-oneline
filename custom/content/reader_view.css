@@ -1,4 +1,7 @@
 @-moz-document url-prefix("about:reader") {
+  :root {
+    --dark-theme-background: #1F2228 !important;
+  }
   body * {
     font-family: sans-serif !important;
   }
