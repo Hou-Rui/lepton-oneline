@@ -1,7 +1,7 @@
 :root {
   --navbar-width: 500px;
   --tabbar-min-width: 300px;
-  --urlbar-expand-side-margin: 12px;
+  --urlbar-expand-side-margin: 48px;
   --tab-block-margin: 2px !important;
   --toolbar-start-end-padding: 4px !important;
 }
@@ -73,6 +73,14 @@
 }
 
 /* extend URL bar to full width when clicked */
+#urlbar-container:has(#urlbar[open]) {
+  position: fixed;
+  display: block;
+  left: var(--urlbar-expand-side-margin) !important;
+  margin-left: 0px !important;
+  width: calc(100% - 2 * var(--urlbar-expand-side-margin)) !important;
+}
+
 #urlbar[breakout][breakout-extend] {
   left: var(--urlbar-expand-side-margin) !important;
   margin-left: 0px !important;
