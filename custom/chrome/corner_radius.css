@@ -5,3 +5,7 @@
   --tab-group-label-size: 28px !important;
   --tab-margin-block: 4px !important;
 }
+
+.tab-group-label {
+  border-radius: var(--tab-border-radius) !important;
+}
