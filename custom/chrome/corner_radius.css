@@ -2,4 +2,6 @@
   --border-radius-medium: 5px !important;
   --tab-border-radius: 5px !important;
   --toolbarbutton-border-radius: 5px !important;
+  --tab-group-label-size: 28px !important;
+  --tab-margin-block: 4px !important;
 }
