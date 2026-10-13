@@ -79,6 +79,7 @@
   left: var(--urlbar-expand-side-margin) !important;
   margin-left: 0px !important;
   width: calc(100% - 2 * var(--urlbar-expand-side-margin)) !important;
+  z-index: 1;
 }
 
 #urlbar[breakout][breakout-extend] {
